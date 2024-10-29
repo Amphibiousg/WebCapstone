@@ -1,0 +1,112 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #003366; /* blue color */
+    color: white;
+    padding: 20px;
+    height: 100vh; /* full viewport height */
+    position: fixed; /* makes the sidebar fixed on the screen */
+    top: 0;
+    left: 0;
+}
+
+.profile-image img {
+    border: 5px solid #ffcb05;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    margin-left: 220px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00274c;
+}
+
+.highlight {
+    color: #ffcb05;
+}
+
+.contact-info {
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #00274c;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.bio {
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100px;  /* Set the height to 200px for small screens */
+        text-align: center;
+    }
+
+    .sidebar nav ul {
+        display: none;  /* Hide all links in the sidebar */
+    }
+
+    .profile-image img {
+        width: 100px;  /* Adjust the size of the profile picture (change as needed) */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .main-content {
+        padding: 20px;
+        margin-left: 10px;
+        margin-top: 100px;
+    }
+}
+
